@@ -1,0 +1,11 @@
+.products-container{
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 30px;
+    color:rgb(80, 8, 8);
+    margin: 50px auto;
+    
+   
+   
+}

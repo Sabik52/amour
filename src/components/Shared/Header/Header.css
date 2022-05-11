@@ -1,1 +1,19 @@
- 
+.navbar{
+    background-color: black ;
+    
+}
+.title{
+   font-weight: 500;
+
+}
+img{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+    
+}
+.toggle-icon{
+    color: #fff;
+}
