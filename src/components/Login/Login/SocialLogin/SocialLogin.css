@@ -1,0 +1,47 @@
+.or-line{
+    width: 50%;
+   margin: auto;
+   
+}
+.line1{
+    height: 1px;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    margin-right: 5px;
+    margin-bottom: 10px;
+   
+
+    
+    
+}
+.line2{
+    height: 1px;
+    width: 50%;
+    background-color: white;
+    margin-left: 5px;
+    margin-bottom: 10px;
+
+    
+  
+
+}
+.line{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.google-btn{
+    padding: 15px;
+     background-color: #3B185F;
+     color: white;
+     border: none;
+     border-radius: 10px;
+     font-weight: 600;
+}
+button img{
+    width: 30px;
+    height: 30px;
+}

@@ -1,5 +1,7 @@
 .cards{
-   box-shadow: 0 4px 8px 0px rgba(0, 0, 0, .2);
+   box-shadow: 0 4px 8px 0px rgba(247, 247, 247, 0.2);
+   background-color: #f9fcff;
+   border-radius: 15px;
    
     
 }
@@ -32,7 +34,7 @@
 }
 .card-btn{
     margin-top: 10px;
-    background-color: #d9563f;
+    background-color: #3B185F;
     color: #fff;
     font-size: 17px;
     padding: 5px 18px;
@@ -44,6 +46,6 @@
     align-content: flex-end;
 }
 .card-btn:hover{
-    background-color: #db7d7d;
+    background-color: #140227;
     transition: 0.2s ease;
 }
