@@ -17,3 +17,10 @@ img{
 .toggle-icon{
     color: #fff;
 }
+
+.signout-btn{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    color: white;
+}

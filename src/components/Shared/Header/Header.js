@@ -19,7 +19,7 @@ const Header = () => {
           <Navbar.Toggle className='toggle-icon' aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#Home">Home</Nav.Link>
+              <Nav.Link href="/Home">Home</Nav.Link>
               <Nav.Link href="home/products">Products</Nav.Link>
 
             </Nav>
@@ -27,7 +27,7 @@ const Header = () => {
               <Nav.Link href="#blogs">Blogs</Nav.Link>
              { 
               user ?
-                    <button onClick={handleSignOut}>Sign Out</button>
+                    <button className='signout-btn' onClick={handleSignOut}>Sign Out</button>
 
               :
              <Nav.Link eventKey={2} href="/login">

@@ -1,5 +1,13 @@
-.details-container{
-    color: #fff;
+.detail-container{
+   
+    width: 400px;
+
+    margin: auto;
+   
+    box-shadow: 0 4px 8px 0px rgba(247, 247, 247, 0.2);
+    background-color: #081f35;
+    border-radius: 15px;
+    color: white;
 }
 .order-btn{
     padding: 15px;

@@ -15,9 +15,9 @@ const Product = ({product}) => {
                 <img src={img} alt="" />
                 <h3>{name}</h3>
                 <h2>Price: ${price}</h2>
-                <h4>{supplier}</h4>
+                <h4>Supplier: {supplier}</h4>
                 <p>{description}</p>
-                <button onClick={showProductDetail} className='card-btn'>Stock Update</button>
+                <button onClick={() =>showProductDetail(_id)} className='card-btn'>Stock Update</button>
                 </div>
 
         
