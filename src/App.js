@@ -10,6 +10,7 @@ import Order from './components/Orders/Order';
 import RequireAuth from './components/Login/RequireAuth/RequireAuth';
 import ProductDetails from './components/ProductDetail/ProductDetails';
 import AddProduct from './components/AddProduct/AddProduct';
+import ManageInventory from './components/ManageInventory/ManageInventory';
 
 function App() {
   return (
@@ -21,9 +22,15 @@ function App() {
         <Route path='/product/:productId' element={<ProductDetails></ProductDetails>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element= {<Register></Register>}></Route>
+
         <Route path='/order' element={
           <RequireAuth>
             <Order></Order>
+          </RequireAuth>
+        }></Route>
+        <Route path='/manageinventory' element={
+          <RequireAuth>
+            <ManageInventory></ManageInventory>
           </RequireAuth>
         }></Route>
         <Route path='/addproduct' element={

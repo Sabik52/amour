@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import Product from '../Product/Product';
-import './Products.css'
+import Product from '../Home/Product/Product';
 
-const Products = () => {
+const ManageInventory = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/product')
@@ -16,18 +14,14 @@ const Products = () => {
             <div className='products-container'>
             
             {
-                products.slice(0, 6).map(product => <Product
+                products.map(product => <Product
                 key = {product._id}
                 product = {product}
                 ></Product>)
             }
             </div>
-            <Link to="/manageinventory">Manage Inventory</Link>
-
         </div>
     );
 };
 
-export default Products;
-
-
+export default ManageInventory;
