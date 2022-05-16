@@ -4,11 +4,15 @@ import google from '../../../../images/logo/google.png'
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../../firebase.init';
 import { useNavigate } from 'react-router-dom';
+import Sppiner from '../../../Shared/Spinner/Sppiner';
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
+
     let errorMessage;
+
+ 
     if(error){
         
            errorMessage = <div>
@@ -16,6 +20,7 @@ const SocialLogin = () => {
             </div>
       
     }
+   
 
     if(user){
         navigate('/home')

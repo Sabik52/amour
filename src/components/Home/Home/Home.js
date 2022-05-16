@@ -6,6 +6,7 @@ import RelatedProduct from '../../RelatedProduct/RelatedProduct';
 import SpecialSale from '../../SpecialSale/SpecialSale';
 
 
+
 const Home = () => {
     return (
         <div>
@@ -13,6 +14,7 @@ const Home = () => {
             <Products></Products>
             <RelatedProduct></RelatedProduct>
             <SpecialSale></SpecialSale>
+            
             
         </div>
     );
