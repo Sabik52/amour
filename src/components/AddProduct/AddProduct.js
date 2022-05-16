@@ -21,13 +21,14 @@ const AddProduct = () => {
     }
   
     return (
-        <div>
-            <h3>Please add Product</h3>
+        <div className='add-product-content'>
+            <h3>Please Add Product</h3>
             
     <form className='add-product input' onSubmit={handleSubmit(onSubmit)}>
       <input placeholder='Product Name' {...register("name", { required: true})} /> <br />
       <input placeholder='Price' type="number" {...register("price")} /><br />
       <input  placeholder='Supplier' {...register("supplier")} /><br />
+      <input  placeholder='Quantity' {...register("quantity")} /><br />
       <input  placeholder='Description' {...register("description")} /><br />
       <input  placeholder='Image URL' {...register("img")} /><br />
       

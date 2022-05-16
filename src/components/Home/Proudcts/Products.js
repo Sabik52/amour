@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import useProducts from '../../../hooks/UseProducts';
 import Product from '../Product/Product';
 import './Products.css'
 
 const Products = () => {
-    const [products, setProducts] = useState([]);
-    useEffect(() => {
-        fetch('http://localhost:5000/product')
-        .then(res => res.json())
-        .then(data => setProducts(data));
-    },[])
+    const [products] = useProducts();
     return (
         <div>
             <h2 className='product-title'>All Products {products.length} </h2>
@@ -22,7 +18,7 @@ const Products = () => {
                 ></Product>)
             }
             </div>
-            <Link to="/manageinventory">Manage Inventory</Link>
+           <button  className='mng-inv-btn'> <Link to="/manageinventory">Manage Inventory</Link></button>
 
         </div>
     );

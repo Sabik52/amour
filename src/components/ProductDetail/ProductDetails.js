@@ -5,6 +5,7 @@ import './ProductDetails.css'
 const ProductDetails = () => {
     const {productId} = useParams();
     const [product,setProduct] = useState({});
+    // const [quantity, setQuantity] =useState;
 
 
     useEffect(()=> {
@@ -15,6 +16,7 @@ const ProductDetails = () => {
         .then(data => setProduct(data));
     },[])
     
+ 
 
     
     return (
@@ -26,7 +28,9 @@ const ProductDetails = () => {
                 <h2>Price: ${product.price}</h2>
                 <h4>Supplier: {product.supplier}</h4>
                 <p>{product.description}</p>
-                <Link  to ="/order"><button className='order-btn'>Derlivered</button></Link>
+                <h3>Quantity: {product.quantity}</h3>
+               
+                <Link  to ="/order"><button  className='order-btn'>Derlivered</button></Link>
                 </div>
 
            
