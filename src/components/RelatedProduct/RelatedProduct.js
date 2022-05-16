@@ -9,7 +9,7 @@ const RelatedProduct = () => {
     <div>
       <h2 className='mt-5 text-white'>New Arrivals</h2>
       <p className='text-white'>Contrary to popular belief, Lorem Ipsum is not simply random text. <br /> It has roots in a piece of classical.</p>
-      <div className="card-group w-75 mx-auto">
+      <div className="card-group w-100 mx-auto">
         <div className="card align-center">
           <img className="card-img-top w-100 h-100" src={image1} alt="Card image cap" />
           <div className="card-body">
