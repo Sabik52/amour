@@ -18,7 +18,9 @@ const Products = () => {
                 ></Product>)
             }
             </div>
-           <button  className='mng-inv-btn'> <Link to="/manageinventory">Manage Inventory</Link></button>
+           <button  className='mng-inv-btn'>
+               
+                <Link to="/manageinventory">Manage Inventory</Link></button>
 
         </div>
     );

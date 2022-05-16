@@ -7,8 +7,20 @@ import './ManageInventory.css'
 
 const ManageInventory = () => {
     const [products, setProducts] = useProducts();
-    
+    const [quantity, setQuantity] = useState()
 
+    
+const handleDecrement = () =>{
+   
+    const inputQunatity = quantity;
+    console.log(inputQunatity)
+   
+
+    
+}
+const handleIncrement =() => {
+    setQuantity(prevCount => prevCount + 1);
+}
     const handleDelevery  = id => {
         // const handleDelivery = event => { event.preventDefault();
             // const deliveryInventoryItem = inventoryItem.quantity(quantity-1);
@@ -61,7 +73,14 @@ const ManageInventory = () => {
                                 <td><img src={product.img} alt="" /> </td>
                                 <td>{product.name}</td>
                                 <td> {product.price}</td>
-                                <td>{product.quantity}</td>
+                                <td>
+                                    <button onClick={handleDecrement}>-</button>
+                                   
+                                    {product.quantity}
+                                    <button onClick={handleIncrement}>+</button>
+
+                                   
+                                    </td>
                                 <td>{product.supplier}</td>
                                 <td><button className='manage-btn' onClick={()=> handleDelete(product._id)}>Delete</button></td>
                                 <td><button className='manage-btn' onClick={()=> handleDelevery()}>Delivered</button></td>

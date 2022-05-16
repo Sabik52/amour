@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './Register.css'
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import { sendEmailVerification } from 'firebase/auth';
 
 
 
@@ -13,7 +14,7 @@ const Register = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth)
+    ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification:true});
 
 
     const navigate = useNavigate();

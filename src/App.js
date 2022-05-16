@@ -11,6 +11,8 @@ import RequireAuth from './components/Login/RequireAuth/RequireAuth';
 import ProductDetails from './components/ProductDetail/ProductDetails';
 import AddProduct from './components/AddProduct/AddProduct';
 import ManageInventory from './components/ManageInventory/ManageInventory';
+import Footer from './components/Shared/Footer/Footer';
+import NotFound from './components/Shared/NotFound/NotFound';
 
 
 function App() {
@@ -41,8 +43,10 @@ function App() {
           </RequireAuth>
         }></Route>
         
+       <Route path='*' element={<NotFound></NotFound>}></Route>
         
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

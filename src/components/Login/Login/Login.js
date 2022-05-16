@@ -1,8 +1,8 @@
 
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import './Login.css'
 import SocialLogin from './SocialLogin/SocialLogin';
@@ -12,7 +12,9 @@ const Login = () => {
     const passwordRef = useRef('');
     const navigate = useNavigate();
     const location = useLocation();
-    let from = location.state?.from?.pathname || "/"
+
+    let from = location.state?.from?.pathname || "/";
+    let errorElement;
 
     const [
         signInWithEmailAndPassword,
@@ -20,6 +22,8 @@ const Login = () => {
         loading,
         error,
       ] = useSignInWithEmailAndPassword(auth);
+
+      const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
       if(user){
           navigate(from, {replace: true});
@@ -36,6 +40,11 @@ const Login = () => {
     const navigateRegister = event => {
         navigate('/register')
 
+    }
+    const resetPassword = async() => {
+        const email = emailRef.current.value;
+        await sendPasswordResetEmail(email);
+        alert('Sent email')
     }
     return (
         <div className='login-container'>
@@ -56,6 +65,7 @@ const Login = () => {
                 <button className='login-btn'>Login</button>
             </Form>
             <p >Don't have an account? <span className='reg-text' onClick={navigateRegister}>Register Here</span></p>
+            <p>Forget Password? <Link className='text-decoration-none ' to= "/register" onClick={resetPassword}> Reset Password</Link> </p>
             <SocialLogin></SocialLogin>
         </div>
     );
