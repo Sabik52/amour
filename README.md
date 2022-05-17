@@ -1,3 +1,18 @@
+# Website Name: Amour
+Live Link: 
+
+# About My Website:
+This is a perfume stcok website. I am trying to maintain all the requirement . Here I added new Inventory add sytem and 
+delete system. And email password authentication system with a social login , forget password and reset password system.
+
+# Features in my site
+1. I use react router, boostrap, reactboostrap, firebase, firebase hooks ect.
+2. Its have password authentication with google and email
+3. Able to add items
+4. Able to delete items 
+5. Show all the inventories at a time and maintain it.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
