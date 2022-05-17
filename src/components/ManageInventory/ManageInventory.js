@@ -12,9 +12,7 @@ const ManageInventory = () => {
     
 const handleDecrement = () =>{
    
-    const inputQunatity = quantity;
-    console.log(inputQunatity)
-   
+  
 
     
 }

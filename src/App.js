@@ -13,6 +13,9 @@ import AddProduct from './components/AddProduct/AddProduct';
 import ManageInventory from './components/ManageInventory/ManageInventory';
 import Footer from './components/Shared/Footer/Footer';
 import NotFound from './components/Shared/NotFound/NotFound';
+import Blogs from './components/Blogs/Blogs';
+import About from './components/About/About';
+import MyItems from './components/MyItems/MyItems';
 
 
 function App() {
@@ -22,6 +25,9 @@ function App() {
       <Routes>
         <Route path='/' element= {<Home></Home>}></Route>
         <Route path='/home' element= {<Home></Home>}></Route>
+        <Route path='/blogs' element= {<Blogs></Blogs>}></Route>
+        <Route path='/about' element= {<About></About>}></Route>
+        <Route path='/myitem' element= {<MyItems></MyItems>}></Route>
         <Route path='/product/:productId' element={<ProductDetails></ProductDetails>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element= {<Register></Register>}></Route>
