@@ -1,5 +1,5 @@
 # Website Name: Amour
-Live Link: 
+Live Link: [https://amour-a534c.web.app/]
 
 # About My Website:
 This is a perfume stcok website. I am trying to maintain all the requirement . Here I added new Inventory add sytem and 
@@ -12,8 +12,7 @@ delete system. And email password authentication system with a social login , fo
 4. Able to delete items 
 5. Show all the inventories at a time and maintain it.
 
-# link of the stackoverflow
-[https://stackoverflow.com/q/72264261/19129921]
+
 
 # Getting Started with Create React App
 
