@@ -28,7 +28,7 @@ const handleIncrement =() => {
     const handleDelete = id => {
       const proceed = window.confirm('Are Your Sure?');
       if(proceed){
-          const url =`http://localhost:5000/product/${id}`;
+          const url =`https://thawing-basin-93769.herokuapp.com/product/${id}`;
           fetch(url, {
               method: 'DELETE'
           })

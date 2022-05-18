@@ -8,6 +8,8 @@ import './Login.css'
 import SocialLogin from './SocialLogin/SocialLogin';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
+import Sppiner from '../../Shared/Spinner/Sppiner';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -27,16 +29,24 @@ const Login = () => {
 
       const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
+      if(loading || sending){
+          return <Sppiner></Sppiner>
+      }
+
       if(user){
-          navigate(from, {replace: true});
+          
       }
 
 
-    const handleSubmit = event => {
+    const handleSubmit = async event => {
         event.preventDefault ();
         const email = emailRef.current.value;
         const password  = passwordRef.current.value;
-        signInWithEmailAndPassword(email, password)
+        await signInWithEmailAndPassword(email, password)
+        const {data} = await axios.post('https://thawing-basin-93769.herokuapp.com/login', {email})
+        
+        localStorage.setItem('accessToke', data.accessToken);
+        navigate(from, {replace: true});
     }
 
     const navigateRegister = event => {

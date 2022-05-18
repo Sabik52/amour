@@ -6,7 +6,7 @@ const MyItems = () => {
     useEffect(() => {
        
         const getNewItems = async() => {
-            const url = `http://localhost:5000/product`;
+            const url = `https://thawing-basin-93769.herokuapp.com/product`;
             const {data} = await axios.get(url);
             setProducts(data);
         }
