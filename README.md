@@ -1,5 +1,5 @@
 # Website Name: Amour
-Live Link: [https://amour-a534c.web.app/]
+Live Link: https://amour-a534c.web.app/
 
 # About My Website:
 This is a perfume stcok website. I am trying to maintain all the requirement . Here I added new Inventory add sytem and 
